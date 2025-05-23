@@ -51,7 +51,7 @@ class BaseRecipeAttributeViewSet(mixins.ListModelMixin,
     def get_queryset(self):
         """Retrieve attributes for authenticated user."""
         return self.queryset.filter(user=self.request.user).order_by("-name")
-    
+
 
 class TagViewSet(BaseRecipeAttributeViewSet):
     """View for manage tag APIs."""
